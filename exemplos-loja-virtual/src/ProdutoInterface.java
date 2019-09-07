@@ -1,17 +1,9 @@
 
 public interface ProdutoInterface {
 	
-	Long getId();
-	
-	void setId(Long id);
-	
 	Long getCodigoDeBarras();
 	
 	void setCodigoDeBarras(Long codigoDeBarras);
-	
-	String getNome();
-	
-	void setNome(String nome);
 	
 	double getPreco();
 	

@@ -7,39 +7,19 @@
  */
 public class Produto implements ProdutoInterface {
 	
-	private Long id;
-	
 	private Long codigoDeBarras;
-	
-	private String nome;
 	
 	private double preco;
 	
 	private int quantidadeEmEstoque = 0;
 
 	//Getters and Setters
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	public Long getCodigoDeBarras() {
 		return codigoDeBarras;
 	}
 
 	public void setCodigoDeBarras(Long codigoDeBarras) {
 		this.codigoDeBarras = codigoDeBarras;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public double getPreco() {
@@ -63,5 +43,5 @@ public class Produto implements ProdutoInterface {
 		 * */
 		return true;
 	}
-	
+
 }
