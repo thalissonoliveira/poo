@@ -39,7 +39,8 @@ public class SistemaDeSalarioMaisComissoes {
 		
 		double valorTotalPagoPelaEmpresa = 0.0;
 		for (Comissionavel comissionavel : comissionaveis) {
-			System.out.println(comissionavel.getNomeDoFilhoDeComissionavel() + " tem comissão " + comissionavel.getComissao());
+			System.out.println(comissionavel.getNomeDoFilhoDeComissionavel() 
+					+ " tem comissão " + comissionavel.getComissao());
 			valorTotalPagoPelaEmpresa += comissionavel.getComissao();
 		}
 		
