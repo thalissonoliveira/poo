@@ -149,7 +149,6 @@
 						<div class="main_nav_content d-flex flex-row">
 
 							<!-- Categories Menu -->
-
 							<div class="cat_menu_container">
 								<div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
 									<div class="cat_burger"><span></span><span></span><span></span></div>
