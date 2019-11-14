@@ -6,6 +6,6 @@ import br.edu.fadam.lojavirtual.modelo.Usuario;
 
 public class UsuariosEmMemoria {
 	
-	public static Map<String, Usuario> usuarios = new HashMap<String, Usuario>();
+	public static Map<Long, Usuario> usuarios = new HashMap<Long, Usuario>();
 	
 }

@@ -1,5 +1,6 @@
 package br.edu.fadam.lojavirtual.dao;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import br.edu.fadam.lojavirtual.modelo.Usuario;
@@ -9,16 +10,17 @@ public class UsuarioDao {
 	
 	public void inserir(Usuario usuario) {
 		System.out.println("Inserindo o usuário " + usuario.getNome());
-		UsuariosEmMemoria.usuarios.put(usuario.getNome(), usuario);
+		UsuariosEmMemoria.usuarios.put(usuario.getId(), usuario);
 	}
 	
 	public void alterar(Usuario usuario) {
 		System.out.println("Alterando o usuário " + usuario.getNome());
-		UsuariosEmMemoria.usuarios.get(usuario.getNome());
+		UsuariosEmMemoria.usuarios.remove(usuario.getId());
+		UsuariosEmMemoria.usuarios.put(usuario.getId(), usuario);
 	}
 	
 	public void deletar(Usuario usuario) {
-		UsuariosEmMemoria.usuarios.remove(usuario.getNome());
+		UsuariosEmMemoria.usuarios.remove(usuario.getId());
 		System.out.println("Inserindo o usuário " + usuario.getNome());
 	}
 	
@@ -33,7 +35,13 @@ public class UsuarioDao {
 	}
 	
 	public Usuario buscarPorNome(String nome) {
-		return UsuariosEmMemoria.usuarios.get(nome);
+		Collection<Usuario> usuarios = UsuariosEmMemoria.usuarios.values();
+		for (Usuario usuario : usuarios) {
+			if (nome.contentEquals(usuario.getNome())) {
+				return usuario;
+			}
+		}
+		return null;
 	}
 	
 }
