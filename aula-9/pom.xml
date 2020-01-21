@@ -9,7 +9,7 @@
 	<packaging>war</packaging>
 
 	<properties>
-			<spring.version>5.1.9.RELEASE</spring.version>
+			<spring.version>5.2.3.RELEASE</spring.version>
 <!-- 		<spring.version>4.0.0.RELEASE</spring.version> -->
 		<hibernate-core-version>3.5.6-Final</hibernate-core-version>
 	</properties>
